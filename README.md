@@ -23,7 +23,6 @@ Installation from RubyGems:
 
 Or, if you're using Bundler, just add the following to your Gemfile:
 
-    gem 'liqpay', github: 'liqpay/sdk-ruby'
     gem 'offsite_payments_przelewy24'
 
 ## Misc.
