@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.author = 'Michał Bajur'
   s.email = 'mbajur@gmail.com'
-  s.homepage = 'https://github.com/mbajur/offsite_payments_migs'
+  s.homepage = 'https://github.com/mbajur/offsite_payments_przelewy24'
 
   s.files = Dir['README.md', 'MIT-LICENSE', 'lib/**/*']
   s.require_path = 'lib'
