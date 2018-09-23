@@ -74,6 +74,7 @@ module OffsitePayments
 
         def form_fields
           @fields['p24_amount'] = Przelewy24.make_amount(@fields['p24_amount'])
+          @fields['p24_currency'] = @fields['p24_currency'].upcase
 
           @fields.merge(
             p24_sign: generate_signature
