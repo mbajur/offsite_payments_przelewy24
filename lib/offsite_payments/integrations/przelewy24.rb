@@ -44,7 +44,7 @@ module OffsitePayments
       end
 
       def self.notification(post, options = {})
-        Notification.new(post)
+        Notification.new(post, options)
       end
 
       def self.return(query_string, options = {})
@@ -213,7 +213,7 @@ module OffsitePayments
             payload[:p24_order_id],
             Przelewy24.make_amount(payload[:p24_amount]),
             payload[:p24_currency],
-            ENV.fetch('PRZELEWY24_CRC_KEY')
+            @options[:credential2]
           ].join('|'))
         end
       end
