@@ -89,7 +89,7 @@ module OffsitePayments
             @fields['p24_merchant_id'].to_s,
             @fields['p24_amount'].to_s,
             @fields['p24_currency'].to_s,
-            @fields['p24_merchant_id'].to_s
+            @options[:credential2].to_s
           ].join('|'))
         end
       end
