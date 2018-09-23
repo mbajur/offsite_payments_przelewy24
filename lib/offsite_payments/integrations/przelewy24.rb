@@ -53,6 +53,7 @@ module OffsitePayments
 
       class Helper < OffsitePayments::Helper
         def initialize(order, account, options = {})
+          @crc_key = options.delete(:credential2)
           super
 
           add_field 'p24_api_version', '3.2'
@@ -88,7 +89,7 @@ module OffsitePayments
             @fields['p24_merchant_id'].to_s,
             @fields['p24_amount'].to_s,
             @fields['p24_currency'].to_s,
-            credential2.to_s
+            @crc_key.to_s
           ].join('|'))
         end
       end
