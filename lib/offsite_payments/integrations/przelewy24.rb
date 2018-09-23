@@ -88,7 +88,7 @@ module OffsitePayments
             @fields['p24_merchant_id'].to_s,
             @fields['p24_amount'].to_s,
             @fields['p24_currency'].to_s,
-            ENV['PRZELEWY24_CRC_KEY'].to_s
+            @fields['p24_merchant_id'].to_s
           ].join('|'))
         end
       end
